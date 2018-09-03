@@ -4,6 +4,7 @@ public class Minion extends Card {
 	
 	private int attack;
 	private int health;
+	private Faction faction;
 	
 	public int getAttack() {
 		return attack;
@@ -16,6 +17,12 @@ public class Minion extends Card {
 	}
 	public void setHealth(int health) {
 		this.health = health;
+	}
+	public Faction getFaction() {
+		return faction;
+	}
+	public void setFaction(Faction faction) {
+		this.faction = faction;
 	}
 	
 }

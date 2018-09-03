@@ -1,9 +1,6 @@
 package cardgameforhumans;
 
-public class Event {
-	
-	enum Events {
-		BATTLECRY, DEATHRATTLE;
-	}
-	
+enum Event {
+	BATTLECRY, DEATHRATTLE;
 }
+	
