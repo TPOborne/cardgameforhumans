@@ -8,14 +8,11 @@ public class Deck {
 	List<Card> initializedDeck;
 	
 	public Deck() {
-		this.initializedDeck = new ArrayList<>(30);
+		this.initializedDeck = new ArrayList<>();
 	}
 	
-	public Deck(int numberOfCards) {
-		this.initializedDeck = new ArrayList<>();
-		for (int i = 0; i < numberOfCards-1; i++) {
-			this.initializedDeck.add(new Minion(i,i,i));
-		}
+	public void addCard(Card card) {
+		this.initializedDeck.add(card);
 	}
 	
 	public Card drawFromTop() {

@@ -6,7 +6,7 @@ public class NameFactory {
 	
 	private static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 	
-	public static String getName() {
+	public static String getRandomName() {
 		String name = "";
 		for (int i = 0; i < 4; i++) {
 			name += getRandom(alphabet);

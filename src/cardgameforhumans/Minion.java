@@ -12,7 +12,7 @@ public class Minion extends Card {
 		this.setMana(cost);
 		this.setAttack(attack);
 		this.setHealth(health);
-		this.setName(NameFactory.getName());
+		this.setName(NameFactory.getRandomName());
 	}
 	
 	public int getAttack() {
