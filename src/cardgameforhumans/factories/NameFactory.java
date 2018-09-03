@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class NameFactory {
 	
-	private char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+	private static char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 	
-	public String getName() {
+	public static String getName() {
 		String name = "";
 		for (int i = 0; i < 4; i++) {
 			name += getRandom(alphabet);
@@ -14,7 +14,7 @@ public class NameFactory {
 		return name;
 	}
 	
-	private char getRandom(char[] array) {
+	private static char getRandom(char[] array) {
 	    int rnd = new Random().nextInt(array.length);
 	    return array[rnd];
 	}

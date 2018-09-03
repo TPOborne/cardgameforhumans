@@ -1,10 +1,19 @@
 package cardgameforhumans;
 
+import cardgameforhumans.factories.NameFactory;
+
 public class Minion extends Card {
 	
 	private int attack;
 	private int health;
 	private Faction faction;
+	
+	public Minion(int cost,int attack,int health) {
+		this.setMana(cost);
+		this.setAttack(attack);
+		this.setHealth(health);
+		this.setName(NameFactory.getName());
+	}
 	
 	public int getAttack() {
 		return attack;
