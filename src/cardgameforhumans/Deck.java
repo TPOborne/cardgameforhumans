@@ -15,9 +15,16 @@ public class Deck {
 		this.initializedDeck.add(card);
 	}
 	
+	public void removeCard(Card card) {
+		this.initializedDeck.remove(card);
+	}
+	
 	public Card drawFromTop() {
-		if(initializedDeck.isEmpty()) {
-			return initializedDeck.get(initializedDeck.size()-1);
+		if(!initializedDeck.isEmpty()) {
+			int index = initializedDeck.size() - 1;
+			Card card = initializedDeck.get(index);
+			initializedDeck.remove(card);
+			return card;
 		} else {
 			return null;
 		}
