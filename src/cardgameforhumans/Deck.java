@@ -1,6 +1,7 @@
 package cardgameforhumans;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
@@ -28,6 +29,10 @@ public class Deck {
 		} else {
 			return null;
 		}
+	}
+	
+	public void shuffle() {
+		Collections.shuffle(initializedDeck);
 	}
 
 }

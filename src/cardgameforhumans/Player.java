@@ -13,14 +13,16 @@ public class Player {
 	Hand hand;
 	Graveyard graveyard;
 	Integer openingHandSize = 5;
+	String name;
 	
-	public Player() {
+	public Player(String name) {
 		deck = DeckFactory.getRandomDeck(20);
 		hitpoints = 30;
 		armor = 0;
-		mana = 1;
+		mana = 0;
 		hand = drawOpeningHand();
 		graveyard = new Graveyard();
+		this.name = name;
 	}
 	
 	private Hand drawOpeningHand() {
@@ -47,6 +49,12 @@ public class Player {
 		this.mana = mana;
 	}
 
+	public void incMana() {
+		if (this.mana < 10) {
+			this.mana++;
+		}
+	}
+	
 	public Integer getHitpoints() {
 		return hitpoints;
 	}
@@ -77,6 +85,14 @@ public class Player {
 
 	public void setGraveyard(Graveyard graveyard) {
 		this.graveyard = graveyard;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	

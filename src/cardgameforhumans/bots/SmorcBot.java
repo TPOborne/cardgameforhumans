@@ -1,4 +1,4 @@
-package bots;
+package cardgameforhumans.bots;
 
 public class SmorcBot extends BasicBot {
 
